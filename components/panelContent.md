@@ -1,4 +1,23 @@
 # PanelContent
+## ArticlePanelFigure
+
+```
+import PanelFigure from '../../components/panelContent/ArticlePanelFigure';
+<PanelFigure
+    inline={true}
+    image='/resources/cbu/img/img-ebill-printscreen@2x.jpg'
+    caption='隨時隨地都能在手機瀏覽帳單資訊'
+/>
+```
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明 |
+| :-------- | :----- | :--- | :--- | :--- |
+| inline  | bool |      |      |      |
+| retinaImage    |string |      | true |      |
+|caption    |string |      | |      |
+|maxWidth    |number|      | |      |
+
 
 ## PanelButton
 

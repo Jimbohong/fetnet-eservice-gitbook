@@ -2159,6 +2159,64 @@ export default connect(mapStateToProps, {setTabUpdate})(TabPane);
 | desc      | string |      |      |      |
 | className | string |      |      |      |
 
+
+
+
+
+## ArticleAuthorTagsPanel
+```
+import ArticleAuthorTagsPanel from '../../components/panel/ArticleAuthorTagsPanel';
+<ArticleAuthorTagsPanel
+  borderAuthor1='文字：江懷哲'
+  borderAuthor2='攝影：Yiya Chou'
+  tags={[
+    {
+      title: '智能家電',
+      url: '#',
+    },
+    {
+      title: 'DYSON',
+      url: '#',
+    },
+    {
+      title: 'friDay購物',
+      url: '#',
+    },
+    {
+      title: '遠傳幣',
+      url: '#',
+    },
+    {
+      title: '智慧家電',
+      url: '#',
+    },
+    {
+      title: '打掃神器',
+      url: '#',
+    },
+  ]}></ArticleAuthorTagsPanel>
+```
+#### Properties
+
+| 名稱          | 屬性   | 選項 | 必填 | 說明 |
+| :------------ | :----- | :--- | :--- | :--- |
+| borderAuthor1 | string |      |      |      |
+| borderAuthor2 | string |      |      |      |
+| tags          | array  |      |      |      |
+
+```
+ArticleAuthorTagsPanel.propTypes = {
+    borderAuthor1: PropTypes.string,
+    borderAuthor2: PropTypes.string,
+    tags: PropTypes.arrayOf(
+        PropTypes.shape({
+            title: PropTypes.string,
+            url: PropTypes.string
+        })
+    )
+}
+```
+
 ## ArticleAuthorSimplePanel
 
 ```

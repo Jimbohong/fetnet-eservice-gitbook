@@ -189,36 +189,3 @@ let faq = export const faq = [
 | payload  | obj    |      |      |                                                                                                                  |
 | url      | obj    |      |      |                                                                                                                  |
 | menuData | string |      |      | id: '123',name: '條款分類',content: [{id: '1',name: '隱私權條款',link: '/help-center/terms-of-service/privacy'}} |
-
-## MoreHelp
-
-```
-import MoreHelp from '../components/helpCenterContent/MoreHelp';
-<MoreHelp
-  cards={
-    [
-      {
-        link: '/content/ebu/tw/form/online-faq-form.html',
-        icon: '/resources/cbu/help-center/images/business-response.svg',
-        title: '企業用戶問題反應',
-        description: '有任何問題嗎? 您可立即線上填寫資料，預約專人為您服務。',
-      },
-      {
-        link: '/content/ebu/tw/help-center/contact-us.html',
-        icon: '/resources/cbu/help-center/images/business-customer-center.svg',
-        title: '企業客服中心',
-        description: `服務專線 <a href='tel:024499365'>02-4499-365</a>`
-      }
-    ]
-  }
-  link={'/content/ebu/tw/help-center/popular-questions.html'}>
-</MoreHelp>
-```
-
-#### Properties
-
-| 名稱  | 屬性   | 選項 | 必填 | 說明 |
-| :---- | :----- | :--- | :--- | :--- |
-| cards | array  |      |      |      |
-| link  | string |      |      |      |
-

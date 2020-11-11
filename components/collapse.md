@@ -95,6 +95,38 @@ export default Collapse
 * CollapseMenu
 * SectionFaq
 
+## Collapse
+
+```
+import Collapse from '../../collapse/Collapse';
+<Collapse
+  title={collapse.title}
+  content={collapse.content}
+  open={this.state.current === i ? this.state.currentOpen : false}
+  onChange={open => this.collapseChnage(open, i)} 
+/>
+```
+
+#### Properties
+
+| 名稱     | 屬性   | 必填 | 選項 | 說明 |
+| :------- | :----- | :--- | :--- | :--- |
+| title    | String |      | true |      |
+| content  | String |      |      |      |
+| children | node   |      |      |      |
+| date     | string |      |      |      |
+| open     | bool   |      |      |      |
+
+```
+Collapse.propTypes = {
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string,
+    children: PropTypes.node,
+    date: PropTypes.string,
+    open: PropTypes.bool
+}
+```
+
 ## SectionCollapseInfo
 
 ![](../.gitbook/assets/image%20%28215%29.png)

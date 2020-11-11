@@ -671,7 +671,7 @@ import LabelPassword from '../components/form/LabelPassword';
 | value       | string |      |      |      |
 | maxLength   | number |      |      |      |
 
-##  LabelTextarea
+## LabelTextarea
 
 ```
 import LabelTextarea from '../form/LabelTextarea'
@@ -917,3 +917,246 @@ import TextInput from '../../components/form/TextInput';
 | value       | string |      |      |      |
 | changeValue | bool   |      |      |      |
 | onChange    | func   |      |      |      |
+
+## NewsletterCheckGroup
+
+```
+import NewsletterCheckGroup from '../../components/form/NewsletterCheckGroup';
+<NewsletterCheckGroup
+  onChange={this.onChange}
+  validationErrors={{ isDefaultRequiredValue: '請選擇階段' }}
+  label='請勾選您要訂閱的電子報'
+  name='newsletter'
+  required={this.state.form.newsletter.required}
+  default=""
+  openPreview={this.openPreview}
+  options={...[
+    {
+      value: '0',
+      label: 'FET會員電子報',
+      date: '每月15日發報',
+      content: '擁有最大發報量，為訂戶量身提供每月免費專屬好禮、會員專屬活動、續約優惠、免費體驗音樂/影音服務、最新手機評測，搶先掌握官網新資訊',
+      link: {
+        name: '查看預覽',
+        url: '#',
+        target: '_blank'
+      },
+      img: {
+        url: '/resources/cbu/img/img-fetmember@3x.jpg',
+        alt: 'img'
+      }
+    },
+    {
+      value: '1',
+      label: '遠傳家族電子報',
+      date: '每月5號發報',
+      content: '提供會員最新的服務訊息，並月月介紹現下最殺的遠傳會員優惠！所有好康都在遠傳家族電子報，現在就來申請！',
+      link: {
+        name: '查看預覽',
+        url: '#',
+        target: '_blank'
+      },
+      img: {
+        url: '/resources/cbu/img/img-fetfamily@3x.jpg',
+        alt: 'img'
+      }
+    },
+    {
+      value: '2',
+      label: 'friDay音樂情報誌',
+      date: '每月1日與16日發報',
+      content: '每期掌握全球最新流行音樂情報，以最快最豐富的音樂資訊及最方便的音樂歌單收藏，讓每個愛樂者可以走到哪聽到哪，音樂訊息不漏接。',
+      link: {
+        name: '查看預覽',
+        url: '#',
+        target: '_blank'
+      },
+      img: {
+        url: '/resources/cbu/img/img-fetmusic@3x.jpg',
+        alt: 'img'
+      }
+    },
+    {
+      value: '3',
+      label: 'FET異業合作訊息',
+      date: '不定期發報',
+      content: '不定期提供各項異業優惠資訊，讓電子報訂戶取得最新、最快、最熱門的市場好康訊息。',
+      link: {
+        name: '查看預覽',
+        url: '#',
+        target: '_blank'
+      },
+      img: {
+        url: '/resources/cbu/img/img-fetcooperation@3x.jpg',
+        alt: 'img'
+      }
+    },
+    {
+      value: '4',
+      label: '產品/服務優惠訊息電子報',
+      date: '不定期發報',
+      content: '不定期提供網路門市最新促銷優惠，熱門新機開賣資訊，續約/攜碼/新申辦促銷方案，以及產品與數位影音加值服務等訊息。',
+      link: {
+        name: '查看預覽',
+        url: '#',
+        target: '_blank'
+      },
+      img: {
+        url: '/resources/cbu/img/img-fetsale@3x.jpg',
+        alt: 'img'
+      }
+    }
+  ]}
+/>
+```
+
+#### Properties
+
+| 名稱        | 屬性   | 選項 | 必填 | 說明 |
+| :---------- | :----- | :--- | :--- | :--- |
+| required    | bool   |      |      |      |
+| label       | string |      | true |      |
+| name        | string |      | true |      |
+| default     | string |      | true |      |
+| openPreview | array  |      |      |      |
+| onChange    | array  |      |      |      |
+
+```
+NewsletterCheckGroup.propTypes = {
+    required: PropTypes.bool,
+    label: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    default: PropTypes.string,
+    openPreview: PropTypes.func,
+    options: PropTypes.arrayOf(
+        PropTypes.shape({
+            value: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+        })
+    ),
+    onChange: PropTypes.func,
+};
+```
+
+
+## RadioCarousel
+
+```
+import RadioCarousel from '../../components/form/RadioCarousel';
+<RadioCarousel
+  numbers={...[
+        {
+          value: '0903-063482',
+          label: '0903-063482'
+        },
+        {
+          value: '2',
+          label: '2',
+          price: 1000
+        },
+        {
+          value: '3',
+          label: '3',
+          price: 1000
+        },
+        {
+          value: '4',
+          label: '4',
+          price: 1000
+        },
+        {
+          value: '5',
+          label: '5',
+          price: 1000
+        },
+        {
+          value: '5',
+          label: '5',
+          price: 1000
+        },
+        {
+          value: '3',
+          label: '3',
+          price: 1000
+        },
+        {
+          value: '4',
+          label: '4',
+          price: 1000
+        },
+        {
+          value: '5',
+          label: '5',
+          price: 1000
+        },
+        {
+          value: '5',
+          label: '5',
+          price: 1000
+        },
+        {
+          value: '0903-063482',
+          label: '0903-063482'
+        },
+        {
+          value: '2',
+          label: '2',
+          price: 1000
+        },
+        {
+          value: '3',
+          label: '3',
+          price: 1000
+        },
+        {
+          value: '4',
+          label: '4',
+          price: 1000
+        },
+        {
+          value: '5',
+          label: '5',
+          price: 1000
+        },
+        {
+          value: '5',
+          label: '5',
+          price: 1000
+        },
+        {
+          value: '3',
+          label: '3',
+          price: 1000
+        },
+        {
+          value: '4',
+          label: '4',
+          price: 1000
+        },
+        {
+          value: '5',
+          label: '5',
+          price: 1000
+        },
+        {
+          value: '5',
+          label: '5',
+          price: 1000
+        },
+        {
+          value: '5',
+          label: '5',
+          price: 1000
+        },
+      ]}
+  value={this.state.form.selected_number.value}
+  name="selected_number"
+  onChange={(n, v) => this.inputChange(n, v, 'form')}
+/>
+```
+
+#### Properties
+
+| 名稱    | 屬性  | 必填 | 選項 | 說明 |
+| :------ | :---- | :--- | :--- | :--- |
+| numbers | array |      |      |      |
