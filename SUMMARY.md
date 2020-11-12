@@ -37,6 +37,8 @@
 * [Paginate](components/paginate.md)
 * [Modal](components/modal.md)
 * [Marquee](components/marquee.md)
+* [Others](components/other.md)
+* [Partials](components/partials/SUMMARY.md)
 
 ## Form
 
